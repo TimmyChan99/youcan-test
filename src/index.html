@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class='bg-custom-gray-light px-4'>
+    <header class='bg-custom-gray-light px-7'>
         <div class='flex items-center justify-between capitalize py-2 border-gray-200 border-b'>
             <div class='flex items-center justify-center space-x-3 font-medium text-custom-blue'>
                 <a href='/' class='w-16'>
@@ -44,7 +44,7 @@
                     <i class="fa-solid fa-angle-right text-[#9a9eaa]"></i>
                     <a href="/">engineering</a>
                 </div>
-                <h1 class='font-bold text-3xl text-custom-blue'>back end developer</h1>
+                <h1 class='capitalize font-bold text-3xl text-custom-blue'>back end developer</h1>
                 <ul class='flex items-center justify-start space-x-5 text-custom-gray'>
                     <li class='flex items-center justify-start space-x-2'>
                         <i class="fa-solid fa-briefcase text-[#9a9eaa]"></i>
@@ -87,48 +87,51 @@
             </div>
         </section>
     </header>
-    <main>
-        <h2 class='text-2xl font-bold text-custom-blue'>Conditates</h2>
-        <div>
-            <ul class='capitalize flex items-center space-x-7 text-custom-gray font-medium'>
-                <li class='px-2 py-4'>
-                    <span>applied</span>
-                    <span class='bg-[#F2F3F7] px-3 py-0.5 text-center rounded-2xl text-custom-blue'>2</span>
-                </li>
-                <li class='px-2 py-4'>
-                    <span>phone screening</span>
-                    <span class='bg-[#F2F3F7] px-3 py-0.5 text-center rounded-2xl text-custom-blue'>4</span>
-                </li>
-                <li class='px-2 py-4'>
-                    <span>interview</span>
-                    <span class='bg-[#F2F3F7] px-4 py-0.5 text-center rounded-2xl text-custom-blue'>6</span>
-                </li>
-                <li class='px-2 py-4'>offer</li>
-                <li class='px-2 py-4'>disqualified</li>
-            </ul>
-        </div>
-        <ul class='grid'>
-            <li class='flex items-center justify-between'>
-                <div class='flex items-center justify-center space-x-3'>
-                    <img class='w-14 h-14 rounded-full object-cover'
-                        src="https://randomuser.me/api/portraits/thumb/women/47.jpg" alt="candidate profile">
-                    <div>
-                        <p class='capitalize text-custom-purple font-medium'>name</p>
-                            <span>
-                                <i class="fa-solid fa-envelope text-[#9a9eaa]"></i>
-                                email@mail.com
-                            </span>
-                    </div>
-                </div>
-                <div>
-                    <p>Applied on January 7,2020</p>
-                    <p>
-                        <i class="fa-solid fa-circle-check text-[#67d1a1]"></i>
-                        <span>Completed phone screening</span>
-                    </p>
-                </div>
-            </li>
-        </ul>
+    <main class='px-7 py-10 space-y-3'>
+        <h2 class='text-2xl font-semibold text-custom-blue'>Conditates</h2>
+ <div>
+               <ul class='border-b capitalize flex items-center space-x-7 text-custom-gray font-medium text-lg'>
+                   <li class='px-2 py-4 space-x-3 flex items-center'>
+                       <span>applied</span>
+                       <span class='bg-[#F2F3F7] text-sm px-3 py-0.5 text-center rounded-2xl text-custom-blue'>2</span>
+                   </li>
+                   <li class='px-2 py-4 space-x-3 flex items-center'>
+                       <span>phone screening</span>
+                       <span class='bg-[#F2F3F7] text-sm px-3 py-0.5 text-center rounded-2xl text-custom-blue'>4</span>
+                   </li>
+                   <li class='px-2 py-4 border-b-[3px] border-custom-purple text-custom-purple space-x-3 flex items-center'>
+                       <span>interview</span>
+                       <span class='bg-custom-purple/20 text-sm px-3 py-0.5 text-center rounded-2xl text-custom-purple'>6</span>
+                   </li>
+                   <li class='px-2 py-4'>offer</li>
+                   <li class='px-2 py-4'>disqualified</li>
+               </ul>
+           <ul class='grid text-lg'>
+               <li class='flex items-center justify-between border-b py-6'>
+                   <div class='flex items-center justify-center space-x-4'>
+                       <img class='w-14 h-14 rounded-full object-cover'
+                           src="https://randomuser.me/api/portraits/thumb/women/47.jpg" alt="candidate profile">
+                       <div>
+                           <p class='capitalize text-custom-purple font-medium'>name</p>
+                               <span class='text-custom-gray space-x-2 flex items-center'>
+                                   <i class="fa-solid fa-envelope text-[#9a9eaa]"></i>
+                                   <p>email@mail.com</p>
+                               </span>
+                       </div>
+                   </div>
+                   <div class='space-y-1'>
+                       <p class='text-custom-blue font-medium'>Applied on January 7,2020</p>
+                       <p class='text-custom-gray flex items-center space-x-2'>
+                           <i class="fa-solid fa-circle-check text-[#67d1a1]"></i>
+                           <span>Completed phone screening</span>
+                       </p>
+                   </div>
+                   <button type='button' title='view more' class='p-2 text-md'>
+                       <i class="fa-solid fa-angle-right text-[#9a9eaa]"></i>
+                   </button>
+               </li>
+           </ul>
+ </div>
     </main>
 </body>
 
