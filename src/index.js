@@ -11,8 +11,8 @@ const fetchCandidates = async () => {
 
 // Template of each candidate
 const candidateTemplate = (picture, firstName, lastName, email) => `
-<li class='flex items-center justify-between border-b py-6'>
-  <div class='flex items-center justify-start space-x-4 w-1/3'>
+<li class='flex flex-col md:flex-row md:items-center md:justify-between border-b py-6 space-y-3 md:space-y-0'>
+  <div class='flex items-center justify-start space-x-4 md:w-1/3'>
     <img class='w-14 h-14 rounded-full object-cover'
       src=${picture} alt="candidate profile">
     <div>
@@ -23,14 +23,15 @@ const candidateTemplate = (picture, firstName, lastName, email) => `
       </span>
     </div>
   </div>
-  <div class='space-y-1 flex flex-col items-start w-1/3'>
-    <p class='text-custom-blue font-medium'>Applied on January 7,2020</p>
+  <div class='space-y-1 flex flex-col items-start md:w-1/3'>
+    <p class='text-custom-blue font-medium'>Applied on January 7, 2020</p>
     <p class='text-custom-gray flex items-center space-x-2'>
       <i class="fa-solid fa-circle-check text-[#67d1a1]"></i>
       <span>Completed phone screening</span>
     </p>
   </div>
-  <button type='button' title='view more' class='p-2 text-md'>
+  <button type='button' title='view more' class='p-2 text-md flex justify-start items-center md:justify-center space-x-3 md:space-x-0'>
+    <span class='text-custom-purple font-medium md:hidden'>View more</span>
     <i class="fa-solid fa-angle-right text-[#9a9eaa]"></i>
   </button>
 </li>
@@ -64,4 +65,23 @@ paginationItems.forEach((item) => {
     e.target.closest('li').classList.add('active');
     e.target.closest('li').classList.remove('not-active');
   });
+});
+
+// Hamburger menu
+const menu = document.querySelector('#menu');
+const navLinks = document.querySelector('#nav-links');
+const close = document.querySelector('#close-menu');
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+  navLinks.classList.toggle('navbar-mobile');
+  close.classList.toggle('fixed');
+  close.classList.toggle('hidden');
+});
+
+close.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+  navLinks.classList.toggle('navbar-mobile');
+  close.classList.toggle('hidden');
+  close.classList.toggle('fixed');
 });

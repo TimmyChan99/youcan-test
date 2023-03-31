@@ -4,31 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./asset/logo.svg">
     <script src="https://kit.fontawesome.com/dfd5c56732.js" crossorigin="anonymous"></script>
     <title>Dashboard</title>
 </head>
 
 <body>
-    <header class='bg-custom-gray-light px-7'>
-        <div class='flex items-center justify-between capitalize py-2 border-gray-200 border-b'>
-            <div class='flex items-center justify-center space-x-3 font-medium text-custom-blue'>
+    <header class='bg-custom-gray-light px-4 md:px-7'>
+        <div class='flex flex-col md:flex-row  md:items-center justify-center md:justify-between capitalize py-2 border-gray-200 border-b'>
+            <div class='flex items-center justify-between md:justify-center md:space-x-3 font-medium text-custom-blue'>
                 <a href='/' class='w-16'>
                     <img src="./asset/logo.svg" alt="website logo">
                 </a>
-                <nav>
-                    <ul class='flex items-center justify-center space-x-1'>
+                <nav id='nav'>
+                    <ul class='navbar-desktop' id='nav-links'>
                         <li class='px-4 py-2 rounded-md bg-[#f2f3f7]'><a href="/">dashboard</a></li>
                         <li class='px-4 py-2'><a href="/">jobs</a></li>
                         <li class='px-4 py-2'><a href="/">application</a></li>
                         <li class='px-4 py-2'><a href="/">company</a></li>
                     </ul>
+                    <i class='fa-solid fa-times text-black hidden left-1/2 translate-x-1/2 -translate-y-1/2 text-2xl' id='close-menu'></i>
+                    <i class="fa-solid fa-bars text-[#9a9eaa] md:hidden" id='menu'></i>
                 </nav>
             </div>
-            <div class='flex items-center justify-between space-x-6 p-2'>
-                <div class='bg-white border-2 border-[#D5D6DA] rounded-md py-2 px-3 w-[300px]'>
+            <div class='flex items-center justify-between space-x-2 md:space-x-6 p-2'>
+                <div class='bg-white border-2 border-[#D5D6DA] rounded-md py-2 px-3 w-fit md:w-[300px]'>
                     <i class="fa-solid fa-magnifying-glass text-[#9a9eaa]"></i>
-                    <input type="search" name="search" id="search" placeholder='search'
-                        class='placeholder:text-custom-gray placeholder:capitalize px-2 focus:outline-none'>
+                    <input type="search" name="search" id="search-input" placeholder='search'
+                        class='placeholder:text-custom-gray placeholder:capitalize md:px-2 focus:outline-none'>
                 </div>
                 <div class='flex items-center justify-center space-x-4'>
                     <i class="fa-regular fa-bell text-[#9a9eaa] text-2xl"></i>
@@ -37,7 +40,7 @@
                 </div>
             </div>
         </div>
-        <section class='flex items-center justify-between py-9 px-2'>
+        <section class='flex flex-col md:flex-row justify-start items-start md:items-center md:justify-between py-9 px-2 space-y-3 md:space-y-0'>
             <div class='space-y-3'>
                 <div class='capitalize flex items-center space-x-4 text-custom-gray font-medium'>
                     <a href="/">jobs</a>
@@ -45,7 +48,7 @@
                     <a href="/">engineering</a>
                 </div>
                 <h1 class='capitalize font-bold text-3xl text-custom-blue'>back end developer</h1>
-                <ul class='flex items-center justify-start space-x-5 text-custom-gray'>
+                <ul class='flex flex-col md:flex-row md:items-center justify-start md:space-x-5 space-y-2 md:space-y-0 text-custom-gray'>
                     <li class='flex items-center justify-start space-x-2'>
                         <i class="fa-solid fa-briefcase text-[#9a9eaa]"></i>
                         <span>Full-time</span>
@@ -60,11 +63,11 @@
                     </li>
                     <li class='flex items-center justify-start space-x-2'>
                         <i class="fa-solid fa-calendar text-[#9a9eaa]"></i>
-                        <span>Closing on January 9,2020</span>
+                        <span>Closing on January 9, 2020</span>
                     </li>
                 </ul>
             </div>
-            <div class='flex items-center justify-center space-x-3 font-medium text-custom-blue'>
+            <div class='flex flex-col md:flex-row items-start md:items-center md:justify-center space-y-2 md:space-y-0 md:space-x-3 font-medium text-custom-blue'>
                 <button type='button'
                     class='border-2 py-2 px-3 rounded-lg flex items-center justify-around space-x-3 bg-white'>
                     <i class="fa-solid fa-pen text-[#9a9eaa]"></i>
@@ -87,10 +90,10 @@
             </div>
         </section>
     </header>
-    <main class='px-7 py-10 space-y-3'>
+    <main class='px-4 md:px-7 py-10 space-y-3'>
         <h2 class='text-2xl font-semibold text-custom-blue'>Canditates</h2>
         <div>
-            <ul class='border-b capitalize flex items-center space-x-7 text-custom-gray font-medium text-lg'>
+            <ul class='border-b capitalize flex flex-col md:flex-row md:items-center justify-start items-start md:space-x-7 text-custom-gray font-medium text-lg'>
                 <li class='px-2 py-4 space-x-3 flex items-center'>
                     <a href='/'>applied</a>
                     <span class='bg-[#F2F3F7] text-sm px-3 py-0.5 text-center rounded-2xl text-custom-blue'>2</span>
@@ -109,11 +112,11 @@
                 <li class='px-2 py-4'><a href='/'>disqualified</a></li></li>
             </ul>
             <ul class='grid grid-cols-1 text-lg' id='candidates-list'></ul>
-            <div class='flex items-center justify-between text-lg'>
-                <span class='text-custom-gray space-x-4 flex items-center font-medium'>
+            <div class='flex flex-col md:flex-row items-center justify-between text-lg space-y-3 md:space-y-0 mt-2 md:mt-0'>
+                <a href='/' class='text-custom-gray space-x-4 flex items-center font-medium'>
                     <i class="fa-solid fa-arrow-left text-[#9a9eaa]"></i>
-                    <a href='/'>Previous</a>
-                </span>
+                    <span>Previous</span>
+                </a>
                 <ul class='flex items-start font-medium text-custom-gray' id='pagination'>
                     <li class='px-5 py-4 border-t-2 not-active'><a href='/'>1</a></li>
                     <li class='px-5 py-4 border-t-2 active'><a href='/'>2</a></li>
@@ -122,10 +125,10 @@
                     <li class='px-5 py-4 border-t-2 not-active'><a href='/'>5</a></li>
                     <li class='px-5 py-4 border-t-2 not-active'><a href='/'>6</a></li>
                 </ul>
-                <span class='text-custom-gray space-x-4 flex items-center font-medium'>
-                    <a href='/'>Next</a>
+                <a href='/' class='text-custom-gray space-x-4 flex items-center font-medium'>
+                    <span>Next</span>
                     <i class="fa-solid fa-arrow-right text-[#9a9eaa]"></i>
-                </span>
+                </a>
             </div>
         </div>
     </main>
