@@ -14,7 +14,7 @@ This project is about rebuilding [mockup design](https://github.com/NextmediaMa/
 - webpack
 - TailwindCSS
 
-## Live Demo
+## Live Demo (not available)
 
 [Live Demo Link](https://livedemo.com)
 
