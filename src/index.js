@@ -49,3 +49,19 @@ window.addEventListener('load', () => {
     });
   });
 });
+
+// Pagination active state
+const pagination = document.querySelector('#pagination');
+const paginationItems = pagination.querySelectorAll('li');
+
+paginationItems.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    paginationItems.forEach((item) => {
+      item.classList.remove('active');
+      item.classList.add('not-active');
+    });
+    e.target.closest('li').classList.add('active');
+    e.target.closest('li').classList.remove('not-active');
+  });
+});

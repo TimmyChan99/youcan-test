@@ -25,10 +25,10 @@
                 </nav>
             </div>
             <div class='flex items-center justify-between space-x-6 p-2'>
-                <div class='bg-white border border-[#D5D6DA] rounded-md py-2 px-3 w-[300px]'>
+                <div class='bg-white border-2 border-[#D5D6DA] rounded-md py-2 px-3 w-[300px]'>
                     <i class="fa-solid fa-magnifying-glass text-[#9a9eaa]"></i>
                     <input type="search" name="search" id="search" placeholder='search'
-                        class='placeholder:text-custom-gray placeholder:capitalize px-2'>
+                        class='placeholder:text-custom-gray placeholder:capitalize px-2 focus:outline-none'>
                 </div>
                 <div class='flex items-center justify-center space-x-4'>
                     <i class="fa-regular fa-bell text-[#9a9eaa] text-2xl"></i>
@@ -76,9 +76,9 @@
                     <span>View</span>
                 </button>
                 <div class='bg-custom-purple text-white flex items-stretch rounded-lg'>
-                    <div class='py-2 px-3 space-x-2'>
+                    <div class='py-2 px-4 space-x-2'>
                         <i class="fa-solid fa-check"></i>
-                        <span class=''>published</span>
+                        <span class=''>Published</span>
                     </div>
                     <button title='drop down' type='button' class='px-3 py-2 border-l border-[#4d4fcf]'>
                         <i class="fa-solid fa-angle-down"></i>
@@ -92,37 +92,37 @@
         <div>
             <ul class='border-b capitalize flex items-center space-x-7 text-custom-gray font-medium text-lg'>
                 <li class='px-2 py-4 space-x-3 flex items-center'>
-                    <span>applied</span>
+                    <a href='/'>applied</a>
                     <span class='bg-[#F2F3F7] text-sm px-3 py-0.5 text-center rounded-2xl text-custom-blue'>2</span>
                 </li>
                 <li class='px-2 py-4 space-x-3 flex items-center'>
-                    <span>phone screening</span>
+                    <a href='/'>phone screening</a>
                     <span class='bg-[#F2F3F7] text-sm px-3 py-0.5 text-center rounded-2xl text-custom-blue'>4</span>
                 </li>
                 <li
                     class='px-2 py-4 border-b-[3px] border-custom-purple text-custom-purple space-x-3 flex items-center'>
-                    <span>interview</span>
+                    <a href='/'>interview</a>
                     <span
                         class='bg-custom-purple/20 text-sm px-3 py-0.5 text-center rounded-2xl text-custom-purple'>6</span>
                 </li>
-                <li class='px-2 py-4'>offer</li>
-                <li class='px-2 py-4'>disqualified</li>
+                <li class='px-2 py-4'><a href='/'>offer</a></li>
+                <li class='px-2 py-4'><a href='/'>disqualified</a></li></li>
             </ul>
-            <ul class='grid text-lg' id='candidates-list'></ul>
+            <ul class='grid grid-cols-1 text-lg' id='candidates-list'></ul>
             <div class='flex items-center justify-between text-lg'>
-                <span class='text-custom-gray space-x-2 flex items-center font-medium'>
+                <span class='text-custom-gray space-x-4 flex items-center font-medium'>
                     <i class="fa-solid fa-arrow-left text-[#9a9eaa]"></i>
                     <a href='/'>Previous</a>
                 </span>
-                <div class='flex items-start font-medium text-custom-gray'>
-                    <a href='/' class='px-5 py-4 border-t-2 border-transparent'>1</a>
-                    <a href='/' class='px-5 py-4 border-t-2 border-custom-purple text-center text-custom-purple'>2</a>
-                    <a href='/' class='px-5 py-4 border-t-2 border-transparent'>3</a>
-                    <a href='/' class='px-5 py-4 border-t-2 border-transparent'>4</a>
-                    <a href='/' class='px-5 py-4 border-t-2 border-transparent'>5</a>
-                    <a href='/' class='px-5 py-4 border-t-2 border-transparent'>6</a>
-                </div>
-                <span class='text-custom-gray space-x-2 flex items-center font-medium'>
+                <ul class='flex items-start font-medium text-custom-gray' id='pagination'>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>1</a></li>
+                    <li class='px-5 py-4 border-t-2 active'><a href='/'>2</a></li>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>3</a></li>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>4</a></li>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>5</a></li>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>6</a></li>
+                </ul>
+                <span class='text-custom-gray space-x-4 flex items-center font-medium'>
                     <a href='/'>Next</a>
                     <i class="fa-solid fa-arrow-right text-[#9a9eaa]"></i>
                 </span>
