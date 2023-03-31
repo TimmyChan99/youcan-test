@@ -30,7 +30,7 @@ const candidateTemplate = (picture, firstName, lastName, email) => `
       <span>Completed phone screening</span>
     </p>
   </div>
-  <button type='button' title='view more' class='p-2 text-md flex items-center justify-center space-x-3 md:space-x-0'>
+  <button type='button' title='view more' class='p-2 text-md flex justify-start items-center md:justify-center space-x-3 md:space-x-0'>
     <span class='text-custom-purple font-medium md:hidden'>View more</span>
     <i class="fa-solid fa-angle-right text-[#9a9eaa]"></i>
   </button>
