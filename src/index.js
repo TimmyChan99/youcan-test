@@ -65,3 +65,22 @@ paginationItems.forEach((item) => {
     e.target.closest('li').classList.remove('not-active');
   });
 });
+
+// Hamburger menu
+const menu = document.querySelector('#menu');
+const navLinks = document.querySelector('#nav-links');
+const close = document.querySelector('#close-menu');
+
+menu.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+  navLinks.classList.toggle('navbar-mobile');
+  close.classList.toggle('fixed');
+  close.classList.toggle('hidden');
+})
+
+close.addEventListener('click', () => {
+  menu.classList.toggle('hidden');
+  navLinks.classList.toggle('navbar-mobile');
+  close.classList.toggle('hidden');
+  close.classList.toggle('fixed');
+})

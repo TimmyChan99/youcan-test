@@ -11,18 +11,20 @@
 
 <body>
     <header class='bg-custom-gray-light px-7'>
-        <div class='flex items-center justify-between capitalize py-2 border-gray-200 border-b'>
-            <div class='flex items-center justify-center space-x-3 font-medium text-custom-blue'>
+        <div class='flex flex-col md:flex-row  md:items-center justify-center md:justify-between capitalize py-2 border-gray-200 border-b'>
+            <div class='flex items-center justify-between md:justify-center md:space-x-3 font-medium text-custom-blue'>
                 <a href='/' class='w-16'>
                     <img src="./asset/logo.svg" alt="website logo">
                 </a>
-                <nav>
-                    <ul class='flex items-center justify-center space-x-1'>
+                <nav id='nav'>
+                    <ul class='navbar-desktop' id='nav-links'>
                         <li class='px-4 py-2 rounded-md bg-[#f2f3f7]'><a href="/">dashboard</a></li>
                         <li class='px-4 py-2'><a href="/">jobs</a></li>
                         <li class='px-4 py-2'><a href="/">application</a></li>
                         <li class='px-4 py-2'><a href="/">company</a></li>
                     </ul>
+                    <i class='fa-solid fa-times text-black hidden' id='close-menu'></i>
+                    <i class="fa-solid fa-bars text-[#9a9eaa] md:hidden" id='menu'></i>
                 </nav>
             </div>
             <div class='flex items-center justify-between space-x-6 p-2'>
@@ -111,10 +113,10 @@
             </ul>
             <ul class='grid grid-cols-1 text-lg' id='candidates-list'></ul>
             <div class='flex items-center justify-between text-lg'>
-                <span class='text-custom-gray space-x-4 flex items-center font-medium'>
+                <a href='/' class='text-custom-gray space-x-4 flex items-center font-medium'>
                     <i class="fa-solid fa-arrow-left text-[#9a9eaa]"></i>
-                    <a href='/'>Previous</a>
-                </span>
+                    <span>Previous</span>
+                </a>
                 <ul class='flex items-start font-medium text-custom-gray' id='pagination'>
                     <li class='px-5 py-4 border-t-2 not-active'><a href='/'>1</a></li>
                     <li class='px-5 py-4 border-t-2 active'><a href='/'>2</a></li>
@@ -123,10 +125,10 @@
                     <li class='px-5 py-4 border-t-2 not-active'><a href='/'>5</a></li>
                     <li class='px-5 py-4 border-t-2 not-active'><a href='/'>6</a></li>
                 </ul>
-                <span class='text-custom-gray space-x-4 flex items-center font-medium'>
-                    <a href='/'>Next</a>
+                <a href='/' class='text-custom-gray space-x-4 flex items-center font-medium'>
+                    <span>Next</span>
                     <i class="fa-solid fa-arrow-right text-[#9a9eaa]"></i>
-                </span>
+                </a>
             </div>
         </div>
     </main>
