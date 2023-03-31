@@ -24,7 +24,7 @@ const candidateTemplate = (picture, firstName, lastName, email) => `
     </div>
   </div>
   <div class='space-y-1 flex flex-col items-start md:w-1/3'>
-    <p class='text-custom-blue font-medium'>Applied on January 7,2020</p>
+    <p class='text-custom-blue font-medium'>Applied on January 7, 2020</p>
     <p class='text-custom-gray flex items-center space-x-2'>
       <i class="fa-solid fa-circle-check text-[#67d1a1]"></i>
       <span>Completed phone screening</span>
