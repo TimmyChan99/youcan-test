@@ -14,9 +14,9 @@ This project is about rebuilding [mockup design](https://github.com/NextmediaMa/
 - webpack
 - TailwindCSS
 
-## Live Demo (not available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://youcan-test.vercel.app/)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
