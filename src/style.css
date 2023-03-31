@@ -12,11 +12,11 @@
     @apply border-transparent;
   }
 
-	.navbar-desktop {
-		@apply md:flex md:items-center md:justify-center md:space-x-1 hidden;
-	}
+  .navbar-desktop {
+    @apply md:flex md:items-center md:justify-center md:space-x-1 hidden;
+  }
 
-	.navbar-mobile {
-		@apply fixed inset-0 bg-custom-gray-light flex flex-col items-center justify-center;
-	}
+  .navbar-mobile {
+    @apply fixed inset-0 bg-custom-gray-light flex flex-col items-center justify-center;
+  }
 }

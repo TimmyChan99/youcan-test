@@ -77,11 +77,11 @@ menu.addEventListener('click', () => {
   navLinks.classList.toggle('navbar-mobile');
   close.classList.toggle('fixed');
   close.classList.toggle('hidden');
-})
+});
 
 close.addEventListener('click', () => {
   menu.classList.toggle('hidden');
   navLinks.classList.toggle('navbar-mobile');
   close.classList.toggle('hidden');
   close.classList.toggle('fixed');
-})
+});
