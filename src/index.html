@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header class='bg-custom-gray-light px-4'>
+    <header class='bg-custom-gray-light px-7'>
         <div class='flex items-center justify-between capitalize py-2 border-gray-200 border-b'>
             <div class='flex items-center justify-center space-x-3 font-medium text-custom-blue'>
                 <a href='/' class='w-16'>
@@ -17,7 +17,7 @@
                 </a>
                 <nav>
                     <ul class='flex items-center justify-center space-x-1'>
-                        <li class='px-4 py-2 rounded-md bg-[#f2f3f5]'><a href="/">dashboard</a></li>
+                        <li class='px-4 py-2 rounded-md bg-[#f2f3f7]'><a href="/">dashboard</a></li>
                         <li class='px-4 py-2'><a href="/">jobs</a></li>
                         <li class='px-4 py-2'><a href="/">application</a></li>
                         <li class='px-4 py-2'><a href="/">company</a></li>
@@ -25,10 +25,10 @@
                 </nav>
             </div>
             <div class='flex items-center justify-between space-x-6 p-2'>
-                <div class='bg-white border border-[#D5D6DA] rounded-md py-2 px-3 w-[300px]'>
+                <div class='bg-white border-2 border-[#D5D6DA] rounded-md py-2 px-3 w-[300px]'>
                     <i class="fa-solid fa-magnifying-glass text-[#9a9eaa]"></i>
                     <input type="search" name="search" id="search" placeholder='search'
-                        class='placeholder:text-custom-gray placeholder:capitalize px-2'>
+                        class='placeholder:text-custom-gray placeholder:capitalize px-2 focus:outline-none'>
                 </div>
                 <div class='flex items-center justify-center space-x-4'>
                     <i class="fa-regular fa-bell text-[#9a9eaa] text-2xl"></i>
@@ -44,7 +44,7 @@
                     <i class="fa-solid fa-angle-right text-[#9a9eaa]"></i>
                     <a href="/">engineering</a>
                 </div>
-                <p class='font-bold text-3xl text-custom-blue'>back end developer</p>
+                <h1 class='capitalize font-bold text-3xl text-custom-blue'>back end developer</h1>
                 <ul class='flex items-center justify-start space-x-5 text-custom-gray'>
                     <li class='flex items-center justify-start space-x-2'>
                         <i class="fa-solid fa-briefcase text-[#9a9eaa]"></i>
@@ -76,9 +76,9 @@
                     <span>View</span>
                 </button>
                 <div class='bg-custom-purple text-white flex items-stretch rounded-lg'>
-                    <div class='py-2 px-3 space-x-2'>
+                    <div class='py-2 px-4 space-x-2'>
                         <i class="fa-solid fa-check"></i>
-                        <span class=''>published</span>
+                        <span class=''>Published</span>
                     </div>
                     <button title='drop down' type='button' class='px-3 py-2 border-l border-[#4d4fcf]'>
                         <i class="fa-solid fa-angle-down"></i>
@@ -87,6 +87,48 @@
             </div>
         </section>
     </header>
+    <main class='px-7 py-10 space-y-3'>
+        <h2 class='text-2xl font-semibold text-custom-blue'>Canditates</h2>
+        <div>
+            <ul class='border-b capitalize flex items-center space-x-7 text-custom-gray font-medium text-lg'>
+                <li class='px-2 py-4 space-x-3 flex items-center'>
+                    <a href='/'>applied</a>
+                    <span class='bg-[#F2F3F7] text-sm px-3 py-0.5 text-center rounded-2xl text-custom-blue'>2</span>
+                </li>
+                <li class='px-2 py-4 space-x-3 flex items-center'>
+                    <a href='/'>phone screening</a>
+                    <span class='bg-[#F2F3F7] text-sm px-3 py-0.5 text-center rounded-2xl text-custom-blue'>4</span>
+                </li>
+                <li
+                    class='px-2 py-4 border-b-[3px] border-custom-purple text-custom-purple space-x-3 flex items-center'>
+                    <a href='/'>interview</a>
+                    <span
+                        class='bg-custom-purple/20 text-sm px-3 py-0.5 text-center rounded-2xl text-custom-purple'>6</span>
+                </li>
+                <li class='px-2 py-4'><a href='/'>offer</a></li>
+                <li class='px-2 py-4'><a href='/'>disqualified</a></li></li>
+            </ul>
+            <ul class='grid grid-cols-1 text-lg' id='candidates-list'></ul>
+            <div class='flex items-center justify-between text-lg'>
+                <span class='text-custom-gray space-x-4 flex items-center font-medium'>
+                    <i class="fa-solid fa-arrow-left text-[#9a9eaa]"></i>
+                    <a href='/'>Previous</a>
+                </span>
+                <ul class='flex items-start font-medium text-custom-gray' id='pagination'>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>1</a></li>
+                    <li class='px-5 py-4 border-t-2 active'><a href='/'>2</a></li>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>3</a></li>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>4</a></li>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>5</a></li>
+                    <li class='px-5 py-4 border-t-2 not-active'><a href='/'>6</a></li>
+                </ul>
+                <span class='text-custom-gray space-x-4 flex items-center font-medium'>
+                    <a href='/'>Next</a>
+                    <i class="fa-solid fa-arrow-right text-[#9a9eaa]"></i>
+                </span>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
