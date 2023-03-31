@@ -17,6 +17,6 @@
 	}
 
 	.navbar-mobile {
-		@apply fixed inset-0 bg-custom-gray-light flex flex-col items-center justify-center space-x-1;
+		@apply fixed inset-0 bg-custom-gray-light flex flex-col items-center justify-center;
 	}
 }
