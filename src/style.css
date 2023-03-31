@@ -4,11 +4,11 @@
 @tailwind utilities;
 
 @layer components {
-	.active {
-		@apply border-custom-purple text-center text-custom-purple border-solid;
-	}
+  .active {
+    @apply border-custom-purple text-center text-custom-purple border-solid;
+  }
 
-	.not-active {
-		@apply border-transparent;
-	}
+  .not-active {
+    @apply border-transparent;
+  }
 }
